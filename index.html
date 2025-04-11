@@ -1,31 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Real-Time Financial Dashboard</title>
-    <link rel="stylesheet" href="stylec.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Financial Dashboard</title>
+  <link rel="stylesheet" href="stylec.css" />
 </head>
 <body>
 
-    <div class="container">
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Financial Dashboard </div>
+    <div class="navbar-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="navbar-links" id="navbar-links">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Stocks</a></li>
+      <li><a href="#">Market</a></li>
+      <li><a href="#">About</a></li>
+      <li id="auth-controls">
+        <button id="login-btn" onclick="location.href='login.html'">Login</button>
+      </li>
+    </ul>
+  </nav>
 
-        <h1> REAL-TIME FINANCIAL DASHBOARD</h1>
-        
-        <div class="stats">
-            <div class="stat"><h2>IBM</h2><p id="ibm-price">Loading...</p></div>
-            <div class="stat"><h2>GOOGLE</h2><p id="googl-price">Loading...</p></div>
-            <div class="stat"><h2>TESLA</h2><p id="tsla-price">Loading...</p></div>
-            <div class="stat"><h2>APPLE</h2><p id="aapl-price">Loading...</p></div>
-            <div class="stat"><h2>AMAZON</h2><p id="amzn-price">Loading...</p></div>
-            <div class="stat"><h2>MICRO SOFT</h2><p id="msft-price">Loading...</p></div>
-        </div>
+  <!-- ✅ Main Content -->
+  <div class="container">
+    <h1>REAL-TIME FINANCIAL DASHBOARD</h1>
 
-        <canvas id="chart"></canvas>
+    <div class="stats">
+      <div class="stat"><h2>IBM</h2><p id="ibm-price">Loading...</p></div>
+      <div class="stat"><h2>GOOGLE</h2><p id="googl-price">Loading...</p></div>
+      <div class="stat"><h2>TESLA</h2><p id="tsla-price">Loading...</p></div>
+      <div class="stat"><h2>APPLE</h2><p id="aapl-price">Loading...</p></div>
+      <div class="stat"><h2>AMAZON</h2><p id="amzn-price">Loading...</p></div>
+      <div class="stat"><h2>MICRO SOFT</h2><p id="msft-price">Loading...</p></div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="script.js"></script>
+    <canvas id="chart"></canvas>
+  </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
 </body>
 </html>

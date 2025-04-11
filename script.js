@@ -71,3 +71,7 @@ function updateChart(prices) {
 // Fetch data initially and then every 5 seconds
 fetchData();
 setInterval(fetchData, 5000);
+
+
+
+
