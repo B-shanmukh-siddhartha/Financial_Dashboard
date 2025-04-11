@@ -165,3 +165,37 @@ h1 {
         text-align: center;
     }
 }
+
+
+#chatbot-container {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+  }
+  
+  .chatbot-header {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .chatbot-body {
+    padding: 15px;
+  }
+  
+  /* Hide by default */
+  .hidden {
+    display:none;
+  }
+  
+  

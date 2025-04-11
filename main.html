@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Real-Time Financial Dashboard</title>
+  <link rel="stylesheet" href="stylec.css" />
+</head>
+<body>
+
+  <!-- ✅ Navbar -->
+  <nav class="navbar">
+    <div class="navbar-brand">Financial Dashboard </div>
+    <div class="navbar-toggle" id="menu-toggle">&#9776;</div>
+    <ul class="navbar-links" id="navbar-links">
+      <li>
+        <!-- 💬 Chatbot Icon -->
+        <button id="chatbot-toggle" onclick="toggleChatbot()">💬</button>
+      </li>
+      <li id="auth-controls">
+        <button id="login-btn" onclick="location.href='login.html'">Login</button>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ✅ Main Content -->
+  <div class="container">
+    <h1>REAL-TIME FINANCIAL DASHBOARD</h1>
+
+    <div class="stats">
+      <div class="stat" onclick="goToDetails('IBM')"><h2>IBM</h2><p id="ibm-price">Loading...</p></div>
+      <div class="stat" onclick="goToDetails('GOOGL')"><h2>GOOGLE</h2><p id="googl-price">Loading...</p></div>
+      <div class="stat" onclick="goToDetails('TSLA')"><h2>TESLA</h2><p id="tsla-price">Loading...</p></div>
+      <div class="stat" onclick="goToDetails('AAPL')"><h2>APPLE</h2><p id="aapl-price">Loading...</p></div>
+      <div class="stat" onclick="goToDetails('AMZN')"><h2>AMAZON</h2><p id="amzn-price">Loading...</p></div>
+      <div class="stat" onclick="goToDetails('MSFT')"><h2>MICRO SOFT</h2><p id="msft-price">Loading...</p></div>
+    </div>
+  
+
+    <canvas id="chart"></canvas>
+  </div>
+  <div id="chatbot-container" class="hidden">
+    <div class="chatbot-header">
+      <span>📊 Stock Chatbot</span>
+      <button onclick="toggleChatbot()">❌</button>
+    </div>
+    <div class="chatbot-body">
+      <div id="chat-messages" style="height: 150px; overflow-y: auto;"></div>
+      <input type="text" id="chat-input" placeholder="Ask about a stock... (e.g., AAPL)" />
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+  <script src="navbar.js"></script>
+  <script src="chatbot.js"></script>
+
+</body>
+</html>

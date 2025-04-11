@@ -2,45 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Real-Time Financial Dashboard</title>
-  <link rel="stylesheet" href="stylec.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finance Dashboard | Welcome</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: center;
+    }
+
+    .main-content {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      color: #00ffd5;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #e0e0e0;
+    }
+
+    button {
+      background-color: #00ffd5;
+      color: #0f2027;
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      box-shadow: 0 0 10px #00ffd5;
+    }
+
+    button:hover {
+      background-color: #00bfa6;
+      box-shadow: 0 0 20px #00ffd5, 0 0 40px #00ffd5;
+    }
+
+    footer {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 10px 0;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- ✅ Navbar -->
-  <nav class="navbar">
-    <div class="navbar-brand">Financial Dashboard </div>
-    <div class="navbar-toggle" id="menu-toggle">&#9776;</div>
-    <ul class="navbar-links" id="navbar-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Stocks</a></li>
-      <li><a href="#">Market</a></li>
-      <li><a href="#">About</a></li>
-      <li id="auth-controls">
-        <button id="login-btn" onclick="location.href='login.html'">Login</button>
-      </li>
-    </ul>
-  </nav>
-
-  <!-- ✅ Main Content -->
-  <div class="container">
-    <h1>REAL-TIME FINANCIAL DASHBOARD</h1>
-
-    <div class="stats">
-      <div class="stat"><h2>IBM</h2><p id="ibm-price">Loading...</p></div>
-      <div class="stat"><h2>GOOGLE</h2><p id="googl-price">Loading...</p></div>
-      <div class="stat"><h2>TESLA</h2><p id="tsla-price">Loading...</p></div>
-      <div class="stat"><h2>APPLE</h2><p id="aapl-price">Loading...</p></div>
-      <div class="stat"><h2>AMAZON</h2><p id="amzn-price">Loading...</p></div>
-      <div class="stat"><h2>MICRO SOFT</h2><p id="msft-price">Loading...</p></div>
-    </div>
-
-    <canvas id="chart"></canvas>
+  <div class="main-content">
+    <h1>Welcome to Financial Dashboard!!</h1>
+    <p>Your Personal Stock Market Assistant</p>
+    <button onclick="startDashboard()">Start</button>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="script.js"></script>
-  <script src="navbar.js"></script>
+  <footer>
+    Made by Team-58, CSM-C, Vardhaman College Of Engineering
+  </footer>
+
+  <script>
+    function startDashboard() {
+      window.location.href = 'main.html';
+    }
+  </script>
+
 </body>
 </html>
